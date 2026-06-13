@@ -1368,6 +1368,7 @@ details.consorcio-accordion[open] summary.consorcio-accordion-header::after {
 
 .partner-logo {
     height: 48px;
+    width: auto;
     max-width: 140px;
     object-fit: contain;
     filter: grayscale(100%);
@@ -1392,6 +1393,7 @@ details.consorcio-accordion[open] summary.consorcio-accordion-header::after {
 
 .footer-logo {
     height: 60px;
+    width: auto;
     max-width: 160px;
     object-fit: contain;
     filter: grayscale(100%) brightness(1.2);
