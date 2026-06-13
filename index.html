@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Emprendimientos Biotecnológicos</title>
+    <meta name="description" content="Portafolio profesional de emprendimientos de base tecnológica y biotecnología. Metodologías Lean Startup aplicadas a proyectos científicos de alto impacto.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de Lectura Dinámica -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+    </div>
+
+    <!-- Encabezado / Barra de Navegación -->
+    <header class="header-nav" id="mainHeader">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Inicio del Portafolio">
+                <div class="logo-icon">B</div>
+                <span class="logo-text">Portafolio de Emprendimientos Biotecnológicos</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item active"><a href="#" data-filter="all">Todos</a></li>
+                    <li class="nav-item"><a href="#hardware" data-filter="cat-hardware">Hardware</a></li>
+                    <li class="nav-item"><a href="#biomed" data-filter="cat-biomed">Bioterapéuticos</a></li>
+                    <li class="nav-item"><a href="#agro" data-filter="cat-agro">Agro-Tecnología</a></li>
+                    <li class="nav-item"><a href="#green-chem" data-filter="cat-green-chem">Química Verde</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero-section">
+        <div class="hero-tag">Biotech & DeepTech Incubator</div>
+        <h1 class="hero-title">Transformando la Ciencia en <span>Soluciones de Impacto</span></h1>
+        <p class="hero-subtitle">
+            Aplicando metodologías <strong>Lean Startup</strong> al ámbito científico-tecnológico para acelerar la transición de la investigación pura en el laboratorio hacia modelos de negocio de alto impacto social y ambiental.
+        </p>
+        <div class="hero-metrics">
+            <div class="metric-item">
+                <span class="metric-number">13</span>
+                <span class="metric-label">Proyectos Germinales</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Enfoque Científico</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-number">4</span>
+                <span class="metric-label">Áreas de Impacto</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros de Categorías Rápidos -->
+    <div class="filter-section">
+        <div class="filter-wrapper" id="filterWrapper">
+            <button class="filter-btn active" data-filter="all">Todos los Proyectos</button>
+            <button class="filter-btn" data-filter="cat-hardware">Hardware</button>
+            <button class="filter-btn" data-filter="cat-biomed">Bioterapéuticos</button>
+            <button class="filter-btn" data-filter="cat-agro">Agro-Tecnología</button>
+            <button class="filter-btn" data-filter="cat-green-chem">Química Verde</button>
+        </div>
+    </div>
+
+    <!-- Contenido Principal (Grid de Proyectos) -->
+    <main class="projects-section">
+        <div class="projects-grid" id="projectsGrid">
+
+            <!-- Tarjeta 1: Hardware Abierto para Biotecnología -->
+            <article class="project-card cat-hardware" data-id="1" id="project-1">
+                <div class="card-image-container">
+                    <span class="category-tag tag-hardware">Hardware</span>
+                    <img class="project-image" src="assets/images/hardware_sketch.png" alt="Hardware Abierto para Biotecnología" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Juan José Rodríguez</span>
+                    </div>
+                    <h3 class="project-title">Hardware Abierto para Biotecnología</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Instrumentación biotecnológica de grado profesional a costos accesibles mediante diseño de código abierto, eliminando la barrera económica para la experimentación.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Alto costo de instrumentación científica que limita la enseñanza y experimentación biotecnológica.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Universidades, escuelas de ciencia, laboratorios de investigación pequeños y makers.</li>
+                                <li><strong>Solución (MVP):</strong> Biorreactor de sobremesa operando con control automatizado de variables críticas (pH, gases, temperatura, agitación).</li>
+                                <li><strong>Canales:</strong> GitHub, comunidades maker, ventas B2B con universidades, ferias científicas.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta de kits de hardware, soporte de calibración, piezas de repuesto personalizadas.</li>
+                                <li><strong>Estructura de Costos:</strong> Componentes electrónicos, materiales de fabricación local (impresión 3D, acrílico), costos de distribución.</li>
+                                <li><strong>Métricas Clave:</strong> Número de unidades en campo, precisión de control de variables críticas frente a estándares comerciales.</li>
+                                <li><strong>Ventaja Injusta:</strong> Calibración validada exitosamente contra estándares de laboratorio comercial a una fracción de su precio.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2: Plataforma de ARNm Nanoencapsulado -->
+            <article class="project-card cat-biomed" data-id="2" id="project-2">
+                <div class="card-image-container">
+                    <span class="category-tag tag-biomed">Bioterapéuticos</span>
+                    <img class="project-image" src="assets/images/biomoleculas_sketch.png" alt="Plataforma de ARNm Nanoencapsulado" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Luis Fernando Guillen Silva</span>
+                    </div>
+                    <h3 class="project-title">Plataforma de ARNm Nanoencapsulado</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Inducción de hormonas con perfiles de secreción fisiológica natural mediante vectores lipídicos, superando las ineficiencias de absorción y los picos anómalos de terapias actuales.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Ineficiencias de absorción y picos anómalos de las terapias hormonales actuales para trastornos endocrinos.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Pacientes con trastornos de crecimiento y deficiencias hormonales endocrinas.</li>
+                                <li><strong>Solución (MVP):</strong> Vectores lipídicos (LNP) cargados con ARNm para inducir una secreción fisiológica hormonal natural.</li>
+                                <li><strong>Canales:</strong> Alianzas farmacéuticas, ensayos clínicos en centros hospitalarios y oncología.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Licenciamiento de la plataforma LNP-ARNm a farmacéuticas, regalías de venta.</li>
+                                <li><strong>Estructura de Costos:</strong> Investigación molecular in vitro/in vivo, formulación de nanopartículas, regulatorios preclínicos.</li>
+                                <li><strong>Métricas Clave:</strong> Vida media de expresión proteica in vivo, tasa de biodistribución tisular, ausencia de inmunogenicidad.</li>
+                                <li><strong>Ventaja Injusta:</strong> Tecnología de recubrimiento lipídico optimizado con datos de farmacocinética estables validados in vivo.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3: Revalorización de Desechos Alimentarios -->
+            <article class="project-card cat-green-chem" data-id="3" id="project-3">
+                <div class="card-image-container">
+                    <span class="category-tag tag-green-chem">Química Verde</span>
+                    <img class="project-image" src="assets/images/quimica_verde_sketch.png" alt="Revalorización de Desechos Alimentarios" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">David Chavaro</span>
+                    </div>
+                    <h3 class="project-title">Revalorización de Desechos Alimentarios</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Ingredientes activos funcionales estandarizados, extraídos de mermas agrícolas locales específicas, ofreciendo una narrativa comprobable de sostenibilidad a marcas finales.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Alto desperdicio de mermas agrícolas locales que dañan el medio ambiente y falta de ingredientes sostenibles para cosmética/alimentos.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Marcas de cosmética natural, alimentos saludables e ingredientes activos.</li>
+                                <li><strong>Solución (MVP):</strong> Extractos funcionales estandarizados y estables de mermas agrícolas locales.</li>
+                                <li><strong>Canales:</strong> Ventas B2B a fabricantes cosméticos y alimentarios, ferias de ingredientes.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta a granel de ingredientes bioactivos estandarizados, consultorías de economía circular.</li>
+                                <li><strong>Estructura de Costos:</strong> Recolección e insumos agrícolas, procesos de extracción verde, análisis de pureza bioquímica.</li>
+                                <li><strong>Métricas Clave:</strong> Rendimiento de extracción (mg/kg), pureza del metabolito de interés, volumen de mermas revalorizadas.</li>
+                                <li><strong>Ventaja Injusta:</strong> Cadena de suministro local y directa integrada con procesos de extracción bioquímica ecológicos.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 4: Mini Proteínas Terapéuticas -->
+            <article class="project-card cat-biomed" data-id="4" id="project-4">
+                <div class="card-image-container">
+                    <span class="category-tag tag-biomed">Bioterapéuticos</span>
+                    <img class="project-image" src="assets/images/biomoleculas_sketch.png" alt="Mini Proteínas Terapéuticas" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Blanca Judith Valdovinos Navarro</span>
+                    </div>
+                    <h3 class="project-title">Mini Proteínas Terapéuticas</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Moléculas terapéuticas hiperestables y ultra compactas que superan drásticamente las barreras de penetración tisular de los anticuerpos monoclonales tradicionales en tratamientos oncológicos.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Baja penetración tisular de los anticuerpos monoclonales tradicionales en tumores oncológicos densos.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Farmacéuticas oncológicas y centros de investigación clínica.</li>
+                                <li><strong>Solución (MVP):</strong> Mini proteínas de novo hiperestables computacionales, 40 veces más pequeñas que anticuerpos tradicionales.</li>
+                                <li><strong>Canales:</strong> Publicaciones científicas, congresos de oncología, desarrollo conjunto con farmacéuticas (CDMO).</li>
+                                <li><strong>Flujos de Ingreso:</strong> Acuerdos de codesarrollo y licencias de patentes de mini proteínas.</li>
+                                <li><strong>Estructura de Costos:</strong> Modelado computacional in silico, síntesis de proteínas en laboratorio, ensayos de unión y estabilidad.</li>
+                                <li><strong>Métricas Clave:</strong> Constante de disociación (Kd) específica, termoestabilidad (°C) y retención en tejidos tumorales.</li>
+                                <li><strong>Ventaja Injusta:</strong> Algoritmos patentados de diseño computacional y datos robustos de validación termodinámica.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 5: Evaluación de Sistemas de Producción Agrícola -->
+            <article class="project-card cat-agro" data-id="5" id="project-5">
+                <div class="card-image-container">
+                    <span class="category-tag tag-agro">Agro-Tecnología</span>
+                    <img class="project-image" src="assets/images/agricultura_sketch.png" alt="Evaluación de Sistemas de Producción Agrícola" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Diana Paola Sanchez</span>
+                    </div>
+                    <h3 class="project-title">Evaluación de Sistemas Agrícolas</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Plataforma de inteligencia que fusiona macro-datos estadísticos históricos con telemetría de campo (IoT) en tiempo real, reduciendo la incertidumbre financiera en políticas agropecuarias.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Incertidumbre y falta de datos precisos para la toma de decisiones financieras y gubernamentales en el agro del sureste de México.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Fideicomisos agrícolas (FIRA), bancos de desarrollo rural y grandes empresas agroquímicas.</li>
+                                <li><strong>Solución (MVP):</strong> Plataforma de inteligencia que fusiona datos oficiales históricos con telemetría IoT y satelital en tiempo real.</li>
+                                <li><strong>Canales:</strong> Portales gubernamentales, consultoría B2B agrícola, demostraciones técnicas.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Licencias SaaS para monitoreo de parcelas, consultoría técnica, informes analíticos anuales.</li>
+                                <li><strong>Estructura de Costos:</strong> Servidores de almacenamiento y procesamiento de datos, mantenimiento de sensores, marketing y ventas.</li>
+                                <li><strong>Métricas Clave:</strong> Tasa de precisión predictiva de rendimiento, número de hectáreas monitoreadas de forma activa.</li>
+                                <li><strong>Ventaja Injusta:</strong> Fusión algorítmica propietaria de datos macro-gubernamentales y telemetría de campo en tiempo real.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 6: BioSpectrum -->
+            <article class="project-card cat-green-chem" data-id="6" id="project-6">
+                <div class="card-image-container">
+                    <span class="category-tag tag-green-chem">Química Verde</span>
+                    <img class="project-image" src="assets/images/quimica_verde_sketch.png" alt="BioSpectrum" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Ofelia Edith Carreón</span>
+                    </div>
+                    <h3 class="project-title">BioSpectrum</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Alternativa deep-tech a colorantes sintéticos que logra espectros de color difíciles a nivel industrial mediante el modelado metabólico de cepas de forma sostenible.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Toxicidad e impacto ambiental de colorantes sintéticos en la industria textil y de alimentos, y costo de colorantes naturales agrícolas.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Casas formuladoras B2B de cosmética, fabricantes textiles de moda sostenible y alimentos.</li>
+                                <li><strong>Solución (MVP):</strong> Producción sostenible de colorantes naturales microbianos in silico y mediante fermentación verde.</li>
+                                <li><strong>Canales:</strong> Asistencia a ferias de insumos químicos sostenibles, alianzas con marcas ecológicas directas.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta de concentrados de colorantes microbianos, licenciamiento de cepas optimizadas.</li>
+                                <li><strong>Estructura de Costos:</strong> Mantenimiento de cepas recombinantes, sustratos agroindustriales de alimentación bacteriana.</li>
+                                <li><strong>Métricas Clave:</strong> Tasa de producción de color por litro de fermentación, estabilidad de tonalidad a la luz y calor.</li>
+                                <li><strong>Ventaja Injusta:</strong> Modelado metabólico in silico patentado que permite producir espectros complejos (verdes, negros) con alto rendimiento.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 7: Sellador Hidrofugante Agroindustrial -->
+            <article class="project-card cat-green-chem" data-id="7" id="project-7">
+                <div class="card-image-container">
+                    <span class="category-tag tag-green-chem">Química Verde</span>
+                    <img class="project-image" src="assets/images/quimica_verde_sketch.png" alt="Sellador Hidrofugante Agroindustrial" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Esmeralda Martinez</span>
+                    </div>
+                    <h3 class="project-title">Sellador Hidrofugante</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Hidrofugante ecológico de alto desempeño arquitectónico, libre de solventes tóxicos, validado para la protección de patrimonio histórico permitiendo la transpiración.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Deterioro acelerado de materiales de construcción y monumentos históricos por eflorescencias salinas y humedad, usando selladores con solventes tóxicos.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Institutos de conservación patrimonial (INAH), constructoras ecológicas y empresas de recubrimientos arquitectónicos.</li>
+                                <li><strong>Solución (MVP):</strong> Sellador hidrofugante ecológico de base agua a base de desechos agroindustriales, sin solventes químicos.</li>
+                                <li><strong>Canales:</strong> Licitaciones públicas para monumentos históricos, distribuidores de pinturas y acabados ecológicos.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta directa a constructoras e instituciones de restauración, regalías por licenciamiento de fórmula.</li>
+                                <li><strong>Estructura de Costos:</strong> Procesamiento de desechos agrícolas, certificación ASTM de calidad, empaque y distribución.</li>
+                                <li><strong>Métricas Clave:</strong> Porcentaje de repelencia al agua, permeabilidad al vapor de agua, durabilidad en ciclos de intemperie.</li>
+                                <li><strong>Ventaja Injusta:</strong> Fórmula ecológica patentada que permite la transpiración natural del sustrato pétreo sin alterar su apariencia visual.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 8: Consultoría en Biofísica Computacional -->
+            <article class="project-card cat-biomed" data-id="8" id="project-8">
+                <div class="card-image-container">
+                    <span class="category-tag tag-biomed">Bioterapéuticos</span>
+                    <img class="project-image" src="assets/images/biomoleculas_sketch.png" alt="Consultoría en Biofísica Computacional" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Edson Acosta Aburto</span>
+                    </div>
+                    <h3 class="project-title">Consultoría en Biofísica</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Reducción comprobable de meses de riesgo, tiempo y gasto de capital (CAPEX) en el descubrimiento de fármacos mediante certidumbre predictiva in silico de alta resolución.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Altos costos de desarrollo de fármacos (CAPEX) y altas tasas de falla clínica por diseños iniciales deficientes.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Compañías farmacéuticas medianas y laboratorios de biotecnología terapéutica.</li>
+                                <li><strong>Solución (MVP):</strong> Consultoría B2B experta basada en simulación de dinámica molecular atómica y docking en supercomputación.</li>
+                                <li><strong>Canales:</strong> Congresos de química médica, portafolio técnico online, redes científicas profesionales.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Honorarios por proyectos de simulación, tarifas mensuales por consultoría de diseño.</li>
+                                <li><strong>Estructura de Costos:</strong> Licencias de software especializado, infraestructura de cómputo en la nube de alta disponibilidad.</li>
+                                <li><strong>Métricas Clave:</strong> Reducción de tiempo en la fase de descubrimiento (meses), porcentaje de hits experimentales validados.</li>
+                                <li><strong>Ventaja Injusta:</strong> Algoritmos de análisis físico-químico propietarios validados con datos reales de fármacos del mercado.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 9: El Camino del Inventor -->
+            <article class="project-card cat-hardware" data-id="9" id="project-9">
+                <div class="card-image-container">
+                    <span class="category-tag tag-hardware">Hardware</span>
+                    <img class="project-image" src="assets/images/hardware_sketch.png" alt="El Camino del Inventor" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Antonio Alcibia</span>
+                    </div>
+                    <h3 class="project-title">El Camino del Inventor</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Metodología robusta, iterada y académicamente validada que desmitifica y estandariza el proceso de protección de propiedad intelectual y transferencia tecnológica.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Complejidad, falta de estructura y alta deserción en el proceso de llevar inventos académicos al licenciamiento industrial.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Oficinas de transferencia tecnológica (OTT), universidades y consorcios de inventores independientes.</li>
+                                <li><strong>Solución (MVP):</strong> Sistema metodológico estructurado en 7 fases desde la ideación hasta el licenciamiento, validado doctoralmente.</li>
+                                <li><strong>Canales:</strong> Talleres universitarios directos, consultorías gubernamentales de patentes, plataformas educativas online.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta de kits didácticos, cobro por talleres corporativos y consultorías de valuación tecnológica.</li>
+                                <li><strong>Estructura de Costos:</strong> Impresión y diseño de materiales pedagógicos, licenciamiento de la plataforma digital de seguimiento.</li>
+                                <li><strong>Métricas Clave:</strong> Número de patentes licenciadas mediante el método, tasa de retención de proyectos en las 7 fases.</li>
+                                <li><strong>Ventaja Injusta:</strong> Sistema metodológico validado empíricamente en el "Laboratorio Vivo" del ecosistema de emprendimiento.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 10: Spin-off Aeroespacial -->
+            <article class="project-card cat-hardware" data-id="10" id="project-10">
+                <div class="card-image-container">
+                    <span class="category-tag tag-hardware">Hardware</span>
+                    <img class="project-image" src="assets/images/hardware_sketch.png" alt="Spin-off Aeroespacial" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Sebastián Polo</span>
+                    </div>
+                    <h3 class="project-title">Spin-off Aeroespacial</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Optimización absoluta en el uso de recursos hídricos o reactivos industriales aplicando termodinámica avanzada, inyectores de precisión y gemelos digitales.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Ineficiencia severa en el uso de agua e inyección de reactivos químicos en la industria y riego agrícola de precisión en México.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Agronegocios tecnificados, industrias de manufactura química y procesadores de alimentos.</li>
+                                <li><strong>Solución (MVP):</strong> Inyectores de precisión e instrumentación de dinámica de fluidos aeroespaciales aplicados a sistemas terrestres.</li>
+                                <li><strong>Canales:</strong> Venta directa B2B a fabricantes, empresas instaladoras de sistemas de riego inteligente.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta de boquillas y sensores de inyección especializada, servicios de ingeniería y gemelos digitales.</li>
+                                <li><strong>Estructura de Costos:</strong> Maquinado CNC de alta tolerancia de inyectores, diseño de firmware de telemetría espacial, calibración de dinámica de fluidos.</li>
+                                <li><strong>Métricas Clave:</strong> Ahorro porcentual de agua/insumos, precisión de inyección en partes por millón (ppm).</li>
+                                <li><strong>Ventaja Injusta:</strong> Know-how exclusivo en dinámica de fluidos computacional aeroespacial aplicado a problemas industriales locales.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 11: Formulaciones para Terapias Celulares -->
+            <article class="project-card cat-biomed" data-id="11" id="project-11">
+                <div class="card-image-container">
+                    <span class="category-tag tag-biomed">Bioterapéuticos</span>
+                    <img class="project-image" src="assets/images/biomoleculas_sketch.png" alt="Formulaciones para Terapias Celulares" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Angélica Meneses Acosta</span>
+                    </div>
+                    <h3 class="project-title">Terapias Celulares</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Matrices de formulación protectora que resuelven el cuello de botella logístico global, mitigando la toxicidad de los crioprotectores y extendiendo la viabilidad.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Pérdida dramática de viabilidad y potencia celular en la logística de congelación tradicional y toxicidad por crioprotectores.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Bancos de células madre, laboratorios de terapia celular y génica, CDMOs farmacéuticas.</li>
+                                <li><strong>Solución (MVP):</strong> Matrices de formulación crioprotectora biocompatible que extienden la ventana clínica de almacenamiento.</li>
+                                <li><strong>Canales:</strong> Congresos de medicina regenerativa, publicaciones de viabilidad celular, ventas técnicas a biobancos.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta de reactivos de formulación patentada, licencias de propiedad intelectual logística.</li>
+                                <li><strong>Estructura de Costos:</strong> Producción química de grado inyectable (GMP), validación celular en condiciones de congelación extrema.</li>
+                                <li><strong>Métricas Clave:</strong> Porcentaje de viabilidad post-descongelación (%), mantenimiento de marcadores de potencia celular.</li>
+                                <li><strong>Ventaja Injusta:</strong> Formulaciones protectoras biocompatibles que superan el estándar global de DMSO sin sus efectos citotóxicos.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 12: Tratamiento de Semillas -->
+            <article class="project-card cat-agro" data-id="12" id="project-12">
+                <div class="card-image-container">
+                    <span class="category-tag tag-agro">Agro-Tecnología</span>
+                    <img class="project-image" src="assets/images/agricultura_sketch.png" alt="Tratamiento de Semillas" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Haydee Laza</span>
+                    </div>
+                    <h3 class="project-title">Tratamiento de Semillas</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Tecnología de recubrimiento patentada que garantiza un incremento estadístico en el vigor inicial y la tasa de emergencia de la plántula, reduciendo el riesgo financiero.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Baja germinación y pérdida de plántulas jóvenes ante estreses climáticos tempranos que arriesgan la inversión agrícola.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Productores de semillas comerciales y distribuidores de agroinsumos a gran escala.</li>
+                                <li><strong>Solución (MVP):</strong> Tecnología patentada de recubrimiento bioactivo para semillas que estimula el vigor inicial de emergencia.</li>
+                                <li><strong>Canales:</strong> Alianzas directas con semilleras internacionales, ensayos de campo en parcelas demostrativas.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Venta de insumos de recubrimiento químico, cobro de licencias por tonelada de semilla tratada.</li>
+                                <li><strong>Estructura de Costos:</strong> Insumos de formulación biológica/química, pruebas regulatorias de ecotoxicidad terrestre.</li>
+                                <li><strong>Métricas Clave:</strong> Incremento porcentual de emergencia en campo (%), rendimiento final de cosecha por hectárea.</li>
+                                <li><strong>Ventaja Injusta:</strong> Patente de recubrimiento bioestimulante que actúa en condiciones de estrés hídrico y térmico severo.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 13: BioChroma Technologies -->
+            <article class="project-card cat-green-chem" data-id="13" id="project-13">
+                <div class="card-image-container">
+                    <span class="category-tag tag-green-chem">Química Verde</span>
+                    <img class="project-image" src="assets/images/quimica_verde_sketch.png" alt="BioChroma Technologies" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="founder-info">
+                        <span>Fundador</span>
+                        <span class="founder-name">Julio Cesar Montañez Saenz</span>
+                    </div>
+                    <h3 class="project-title">BioChroma Technologies</h3>
+                    <div class="uvp-box">
+                        <span class="uvp-label">Propuesta de Valor</span>
+                        <p class="uvp-text">Plataforma biotecnológica altamente eficiente y madura para sustituir pigmentos sintéticos de la industria avícola y cosmética, operando bajo un modelo de cero residuos.</p>
+                    </div>
+                    <details class="lean-canvas-accordion">
+                        <summary class="accordion-header">Detalles del Lean Canvas</summary>
+                        <div class="accordion-body">
+                            <ul class="lean-canvas-list">
+                                <li><strong>Problema:</strong> Alta dependencia de la industria avícola y cosmética de pigmentos artificiales tóxicos o naturales insostenibles.</li>
+                                <li><strong>Segmentos de Cliente:</strong> Industria de alimento avícola (coloración de yema y piel) y marcas cosméticas sostenibles.</li>
+                                <li><strong>Solución (MVP):</strong> Escalamiento biotecnológico para la producción industrial de pigmentos microbianos a partir de residuos agroindustriales (validado a 7L).</li>
+                                <li><strong>Canales:</strong> Ventas corporativas B2B a productoras de alimento animal, participación en ferias internacionales de nutrición.</li>
+                                <li><strong>Flujos de Ingreso:</strong> Comercialización de extractos concentrados de pigmentos, servicios de escalamiento a escala piloto.</li>
+                                <li><strong>Estructura de Costos:</strong> Operación de biorreactores a escala piloto (7L y superior), sustratos de fermentación, purificación de pigmentos.</li>
+                                <li><strong>Métricas Clave:</strong> Rendimiento de biomasa y pigmento por litro de fermentación, costo operativo por gramo obtenido.</li>
+                                <li><strong>Ventaja Injusta:</strong> Proceso de fermentación optimizado a escala piloto (7L) utilizando biorreactores open-source y subproductos industriales de costo cero.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <div class="social-interaction-box">
+                        <div class="like-bar">
+                            <button class="like-btn" aria-label="Dar me gusta">
+                                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                <span>Me gusta</span>
+                            </button>
+                            <div class="like-counter">Likes: <span>0</span></div>
+                        </div>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button type="submit" class="comment-submit-btn">Enviar</button>
+                        </form>
+                        <details class="comments-accordion">
+                            <summary class="comments-summary">Ver comentarios (<span class="comment-count">0</span>)</summary>
+                            <div class="comments-list-container"></div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Sección de Sinergias y Equipos -->
+    <section class="synergies-section" id="synergies">
+        <div class="synergies-container">
+            <div class="synergies-header">
+                <span class="synergies-tag">Sinergias y Equipos</span>
+                <h2 class="synergies-title">Potenciando Colaboraciones en el Ecosistema</h2>
+                <p class="synergies-subtitle">La innovación de frontera surge al unir talentos con capacidades complementarias en diseño biológico, escalamiento de procesos y desarrollo de hardware.</p>
+            </div>
+            
+            <div class="synergies-grid">
+                <!-- Talento Científico Destacado -->
+                <div class="talent-card">
+                    <div class="talent-image-box">
+                        <img src="assets/images/biomoleculas_sketch.png" class="talent-image" alt="Boceto de Talento en Sinergias" loading="lazy">
+                    </div>
+                    <span class="talent-role">Talento en Búsqueda de Sinergias</span>
+                    <h3 class="talent-name">Jesús Asael Perez Vargas</h3>
+                    <div class="talent-uvp-box">
+                        <span class="talent-uvp-label">Oferta de Valor</span>
+                        <p class="talent-uvp-text">Integración activa a equipos fundadores como ingeniero de cepas o perfil técnico, aportando capacidades avanzadas en modificación genética para acelerar proyectos desde la mesada del laboratorio hacia aplicaciones reales.</p>
+                    </div>
+                    <p class="talent-bio">
+                        Estudiante de licenciatura en Biotecnología apasionado por la biología molecular, mutagénesis, tecnologías de ADN recombinante y células iPSCs. Cuenta con experiencia práctica en la identificación de virus en plantas y mutagénesis dirigida.
+                    </p>
+                    <div class="talent-btn-box">
+                        <a href="mailto:jasael.perez@example.com" class="talent-btn btn-primary">Conectar Perfil</a>
+                    </div>
+                </div>
+
+                <!-- Consorcio SynBio Color -->
+                <div class="consorcio-card">
+                    <span class="consorcio-badge">Consorcio Integrado DeepTech</span>
+                    <h3 class="consorcio-title">Consorcio SynBio Color</h3>
+                    <p class="consorcio-leaders">Integrantes del Equipo: <span>Ofelia Carreón</span> (BioSpectrum), <span>Julio Montañez</span> (BioChroma), <span>Juan José Rodríguez</span> (Hardware Abierto) y <span>Jesús Asael Perez Vargas</span> (Ingeniería de Cepas).</p>
+                    <p class="consorcio-description">
+                        Este consorcio representa una sinergia natural identificada en el ecosistema. Une capacidades de diseño de cepas especializadas, escalamiento óptimo de bioprocesos en biorreactores y desarrollo de hardware propietario para abordar el mercado DeepTech de los colorantes microbianos sostenibles, sustituyendo a los colorantes químicos sintéticos y de origen agropecuario.
+                    </p>
+
+                    <!-- Acordeón Lean Canvas Integrado -->
+                    <details class="consorcio-accordion">
+                        <summary class="consorcio-accordion-header">Ver Lean Canvas del Consorcio (9 Bloques)</summary>
+                        <div class="consorcio-accordion-body">
+                            <div class="canvas-integrated-grid">
+                                <div class="canvas-integrated-item">
+                                    <h4>Problema</h4>
+                                    <p>La industria alimentaria y cosmética depende de colorantes sintéticos tóxicos. Las alternativas naturales no logran cubrir espectros complejos a escalas industriales viables, son costosas y dependen de ciclos agrícolas.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Segmentos de Cliente</h4>
+                                    <p>Fabricantes de ingredientes para la industria avícola (pigmentación), casas formuladoras B2B de cosmética limpia (Clean Beauty) e industria alimentaria general.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>UVP (Propuesta de Valor)</h4>
+                                    <p>Plataforma de producción de un espectro completo de colorantes 100% naturales y estables, producidos bajo demanda mediante fermentación de precisión de residuos agroindustriales (economía circular) y bacterias de diseño.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Solución (MVP)</h4>
+                                    <p>Lote piloto de pigmento puro (validado a escala de 7L) listo para pruebas de estabilidad en anaquel o en dieta avícola experimental.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Canales</h4>
+                                    <p>Alianzas estratégicas con empresas de nutrición animal, asistencia a ferias internacionales de ingredientes (IFT FIRST, in-cosmetics), y publicaciones académicas de alto impacto.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Flujos de Ingreso</h4>
+                                    <p>Licenciamiento de cepas optimizadas y protocolos de bioprocesos a grandes corporativos, y venta B2B directa de pigmentos a granel.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Estructura de Costos</h4>
+                                    <p>Laboratorio de biología sintética (con CAPEX reducido por los reactores propietarios de Juan José), operación de biorreactores de escalamiento, reactivos y certificaciones SADER/FDA.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Métricas Clave</h4>
+                                    <p>Título, Tasa y Rendimiento (TRY) del pigmento en fermentación, y costo de producción por kg frente al líder sintético de la industria.</p>
+                                </div>
+                                <div class="canvas-integrated-item">
+                                    <h4>Ventaja Injusta</h4>
+                                    <p>Sinergia técnica inigualable uniendo patentes en trámite, know-how avanzado de diseño metabólico in silico y el uso de instrumentación propietaria de bajo costo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Estructura Financiera Consorcio -->
+                    <h4 style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-green-light); margin-bottom: 1.25rem;">Estructura Financiera (Horizonte 3-5 años)</h4>
+                    <div class="finance-timeline">
+                        <div class="finance-phase">
+                            <div class="phase-num">1</div>
+                            <div class="phase-content">
+                                <h5 class="phase-title">Prueba de Concepto (Meses 1-12)</h5>
+                                <p class="phase-desc">Validación de cepas en biorreactores open-source (1L-3L). Fondeo mediante subsidios gubernamentales y capital semilla ángel.</p>
+                                <div class="phase-cost">$100,000 - $150,000 USD</div>
+                            </div>
+                        </div>
+                        <div class="finance-phase">
+                            <div class="phase-num">2</div>
+                            <div class="phase-content">
+                                <h5 class="phase-title">Piloto Pre-Serie A (Meses 13-24)</h5>
+                                <p class="phase-desc">Escalamiento a 50L-100L mediante un CDMO para entregar muestras comerciales a Early Adopters. Respaldo de Venture Capital en Biotech.</p>
+                                <div class="phase-cost">$500,000 - $1,000,000 USD</div>
+                            </div>
+                        </div>
+                        <div class="finance-phase">
+                            <div class="phase-num">3</div>
+                            <div class="phase-content">
+                                <h5 class="phase-title">Expansión Serie A (Año 3+)</h5>
+                                <p class="phase-desc">Producción industrial sostenida superando los 10,000L con punto de equilibrio operativo. Captación de inversión institucional.</p>
+                                <div class="phase-cost">$3,000,000+ USD</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página Institucional -->
+    <footer class="institutional-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h3>Taller de Ideación, Prototipado y Comunicación</h3>
+                <p>Curso de Emprendimiento en Biotecnología y DeepTech. Esta plataforma actúa como un repositorio de ideas germinales estructuradas para validar su viabilidad científica y comercial en el mundo real.</p>
+                <div class="footer-disclaimer">
+                    <strong>Aviso Académico:</strong> Los proyectos aquí descritos representan hipótesis iniciales de negocio. No están tallados en piedra; están diseñados para pivotar, madurar y transformarse conforme interactúan con el mercado.
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Categorías</h4>
+                <ul>
+                    <li><a href="#" data-filter="cat-hardware">Hardware</a></li>
+                    <li><a href="#" data-filter="cat-biomed">Bioterapéuticos</a></li>
+                    <li><a href="#" data-filter="cat-agro">Agro-Tecnología</a></li>
+                    <li><a href="#" data-filter="cat-green-chem">Química Verde</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Ecosistema</h4>
+                <ul>
+                    <li><a href="#synergies">Sinergias y Equipos</a></li>
+                    <li><a href="file:///c:/Users/Grace/Desktop/Emprendimiento/EMPRENDIMIENTOS%201.pdf" target="_blank">Documento Original</a></li>
+                    <li><a href="file:///c:/Users/Grace/Desktop/Emprendimiento/Lean_startup_para_cientificos.pdf" target="_blank">Recursos Lean Startup</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; 2026 Curso de Emprendimiento en Biotecnología y DeepTech. Todos los derechos reservados.</div>
+            <div class="footer-signature">Desarrollado para el ecosistema de innovación por <span>Antigravity AI</span></div>
+        </div>
+    </footer>
+
+    <!-- Lógica JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
