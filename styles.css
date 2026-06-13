@@ -1222,3 +1222,197 @@ details.consorcio-accordion[open] summary.consorcio-accordion-header::after {
         text-align: center;
     }
 }
+
+/* Estilos para el Widget de Comentarios de Utterances */
+.comments-widget-container {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    min-height: 280px; /* Asegura espacio en blanco suficiente para que el widget cargue sin saltos de diseño */
+    width: 100%;
+}
+
+/* Sección de Introducción y Conceptos de Lean Canvas */
+.intro-canvas-section {
+    max-width: 1280px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 2rem;
+}
+
+.intro-canvas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.intro-box h2, .canvas-concepts-box h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-deep);
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.intro-box h2::after, .canvas-concepts-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-green-light);
+    border-radius: 99px;
+}
+
+.intro-box p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+.intro-box strong {
+    color: var(--primary-deep);
+    font-weight: 600;
+}
+
+.canvas-concepts-box .concepts-intro {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.concepts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Scrollbar personalizado para la lista de conceptos */
+.concepts-grid::-webkit-scrollbar {
+    width: 6px;
+}
+.concepts-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+.concepts-grid::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 99px;
+}
+
+.concept-item {
+    background-color: var(--bg-subtle);
+    border-left: 3px solid var(--accent-green);
+    padding: 0.75rem 1rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 0.88rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+}
+
+.concept-item strong {
+    color: var(--primary-deep);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.15rem;
+}
+
+/* Nota de GitHub Opcional */
+.github-notice {
+    background-color: #f0fdf4; /* Light green bg */
+    border: 1px dashed var(--accent-green-border);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: #065f46; /* Emerald 800 */
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.github-notice a {
+    color: var(--accent-green);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: var(--transition-fast);
+}
+
+.github-notice a:hover {
+    color: var(--accent-green-light);
+}
+
+/* Logos de Colaboradores / Logos en el Header */
+.nav-right-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border-left: 1px solid var(--border-color);
+    padding-left: 1.25rem;
+}
+
+.partner-logo {
+    height: 48px;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter var(--transition-fast), opacity var(--transition-fast);
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Logos en el Footer */
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    height: 60px;
+    max-width: 160px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.2);
+    opacity: 0.6;
+    transition: filter var(--transition-fast), opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-logo:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* Adaptación responsiva para la nueva sección */
+@media (max-width: 900px) {
+    .intro-canvas-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2rem;
+    }
+    .header-logos {
+        display: none; /* Ocultar logos en el header en pantallas muy chicas para no saturar */
+    }
+}

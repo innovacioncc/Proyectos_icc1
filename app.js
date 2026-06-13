@@ -88,80 +88,82 @@ document.addEventListener('DOMContentLoaded', () => {
             likeCounterSpan.textContent = updatedLikesData[projectKey];
         });
 
-        // 3. Renderizado y Envío de Comentarios
+        // 3. Renderizado y Envío de Comentarios (opcional, si los elementos locales existen)
         const commentsListContainer = card.querySelector('.comments-list-container');
         const commentCountSpan = card.querySelector('.comment-count');
         const commentForm = card.querySelector('.comment-form');
         const commentInput = card.querySelector('.comment-input');
 
-        const renderComments = () => {
-            const allComments = JSON.parse(localStorage.getItem('biotech_comments'));
-            const projectComments = allComments[projectKey] || [];
-            commentsListContainer.innerHTML = '';
-            commentCountSpan.textContent = projectComments.length;
+        if (commentsListContainer && commentCountSpan && commentForm && commentInput) {
+            const renderComments = () => {
+                const allComments = JSON.parse(localStorage.getItem('biotech_comments'));
+                const projectComments = allComments[projectKey] || [];
+                commentsListContainer.innerHTML = '';
+                commentCountSpan.textContent = projectComments.length;
 
-            if (projectComments.length === 0) {
-                commentsListContainer.innerHTML = '<div class="no-comments">No hay comentarios aún. ¡Sé el primero!</div>';
-                return;
-            }
+                if (projectComments.length === 0) {
+                    commentsListContainer.innerHTML = '<div class="no-comments">No hay comentarios aún. ¡Sé el primero!</div>';
+                    return;
+                }
 
-            projectComments.forEach(comment => {
-                const commentElement = document.createElement('div');
-                commentElement.className = 'comment-item';
-                commentElement.innerHTML = `
-                    <div class="comment-header">
-                        <span class="comment-author">${comment.author || 'Visitante'}</span>
-                        <span class="comment-date">${comment.date}</span>
-                    </div>
-                    <div class="comment-text">${comment.text}</div>
-                `;
-                commentsListContainer.appendChild(commentElement);
-            });
-        };
-
-        // Renderizar al inicio
-        renderComments();
-
-        // Enviar nuevo comentario
-        commentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const text = commentInput.value.trim();
-            if (!text) return;
-
-            const allComments = JSON.parse(localStorage.getItem('biotech_comments'));
-            if (!allComments[projectKey]) {
-                allComments[projectKey] = [];
-            }
-
-            const now = new Date();
-            const dateStr = now.toLocaleDateString('es-ES', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: true
-            });
-
-            // Guardamos el comentario como "Usuario" (simulado para local)
-            const newComment = {
-                text: text,
-                author: 'Tú (Visitante)',
-                date: dateStr
+                projectComments.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment-item';
+                    commentElement.innerHTML = `
+                        <div class="comment-header">
+                            <span class="comment-author">${comment.author || 'Visitante'}</span>
+                            <span class="comment-date">${comment.date}</span>
+                        </div>
+                        <div class="comment-text">${comment.text}</div>
+                    `;
+                    commentsListContainer.appendChild(commentElement);
+                });
             };
 
-            allComments[projectKey].push(newComment);
-            localStorage.setItem('biotech_comments', JSON.stringify(allComments));
-
-            commentInput.value = '';
+            // Renderizar al inicio
             renderComments();
 
-            // Abrir automáticamente el acordeón de comentarios si estaba cerrado para que el usuario vea su comentario
-            const commentsAccordion = card.querySelector('.comments-accordion');
-            if (commentsAccordion) {
-                commentsAccordion.open = true;
-            }
-        });
+            // Enviar nuevo comentario
+            commentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const text = commentInput.value.trim();
+                if (!text) return;
+
+                const allComments = JSON.parse(localStorage.getItem('biotech_comments'));
+                if (!allComments[projectKey]) {
+                    allComments[projectKey] = [];
+                }
+
+                const now = new Date();
+                const dateStr = now.toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                });
+
+                // Guardamos el comentario como "Usuario" (simulado para local)
+                const newComment = {
+                    text: text,
+                    author: 'Tú (Visitante)',
+                    date: dateStr
+                };
+
+                allComments[projectKey].push(newComment);
+                localStorage.setItem('biotech_comments', JSON.stringify(allComments));
+
+                commentInput.value = '';
+                renderComments();
+
+                // Abrir automáticamente el acordeón de comentarios si estaba cerrado para que el usuario vea su comentario
+                const commentsAccordion = card.querySelector('.comments-accordion');
+                if (commentsAccordion) {
+                    commentsAccordion.open = true;
+                }
+            });
+        }
     });
 
     // 4. Filtrado Dinámico de Categorías (Navbar + Botones de Filtro)
