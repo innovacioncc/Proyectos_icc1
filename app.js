@@ -269,4 +269,29 @@ document.addEventListener('DOMContentLoaded', () => {
             mainHeader.classList.remove('scrolled');
         }
     });
+
+    // 6. Lógica de Pestañas (Tabs)
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabBtns.length > 0 && tabContents.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Quitar activo de todos los botones
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // Quitar activo de todos los contenidos
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                // Añadir activo al botón clickeado
+                btn.classList.add('active');
+                
+                // Añadir activo al contenido correspondiente
+                const targetId = btn.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
 });
